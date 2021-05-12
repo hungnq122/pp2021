@@ -16,6 +16,7 @@ def list_student():
     for i in range(0, number):
         list_student = student_infor()
         students += [list_student]
+    print("List of student : ")
     print(students)
 
 
@@ -34,16 +35,17 @@ def course_infor():
 def list_course():
     courses = []
     number_courses = number_course()
-    for i in range(0, number_courses):
+    for i in range(1, number_courses):
         list_course = course_infor()
         courses += [list_course]
+    print("List of course : ")
     print(courses)
 
 
 
 # mark
-def number_student_mark():
-    student = int(input("Number of student have mark: "))
+def number_mark():
+    student = int(input("Number of mark we have for student: "))
     return student
 
 
@@ -56,11 +58,17 @@ def update_marks():
 
 def list_mark():
     mark = []
-    mark = number_student_mark()
+    mark = number_mark()
     for i in range(0, mark):
         list_mark = update_marks()
         mark += [list_mark]
     print(mark)
 
+number_students()
+list_student()
 
+number_course()
+list_course()
 
+number_mark()
+list_mark()
